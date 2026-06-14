@@ -73,6 +73,44 @@ st.markdown("""
     }
     
     .panel-divider { border-bottom: 1px solid #1e293b; margin: 35px 0; }
+    
+    /* Premium Executive Asset Footer Style Matrix */
+    .telemetry-footer-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid #141b2d;
+        padding-top: 20px;
+        margin-top: 50px;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.78rem;
+        letter-spacing: 0.5px;
+    }
+    .footer-left {
+        color: #4b5563;
+        text-transform: uppercase;
+    }
+    .footer-left a {
+        color: #00b4d8;
+        text-decoration: none;
+        font-weight: 700;
+        transition: color 0.2s ease-in-out;
+    }
+    .footer-left a:hover {
+        color: #00f2fe;
+    }
+    .footer-right {
+        color: #4b5563;
+        text-transform: uppercase;
+    }
+    .footer-right b {
+        color: #ffffff;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+    .footer-right span {
+        color: #00b4d8;
+    }
     </style>
 """, unsafe_allow_html=True)
 
@@ -265,3 +303,18 @@ fig_tree.update_traces(
 )
 
 st.plotly_chart(fig_tree, width="stretch", key="unified_perspective_treemap_plot")
+
+
+# =====================================================================
+# 4. EXECUTIVE METADATA & TELEMETRY FOOTER LAYER
+# =====================================================================
+st.markdown("""
+    <div class='telemetry-footer-container'>
+        <div class='footer-left'>
+            DATA REPOSITORY ASSET: <a href='https://dataful.in/datasets/15737/' target='_blank'>DEPARTMENT FOR PROMOTION OF INDUSTRY AND INTERNAL TRADE (DPIIT) ↗</a>
+        </div>
+        <div class='footer-right'>
+            DEVELOPED BY <b>SAJESH NAIR</b> | <span>DATA SCIENCE PORTFOLIO</span>
+        </div>
+    </div>
+""", unsafe_allow_html=True)
